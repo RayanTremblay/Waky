@@ -1,0 +1,402 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 70;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B001000000000000000001 /* WakyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000001 /* WakyApp.swift */; };
+		B001000000000000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000002 /* ContentView.swift */; };
+		B001000000000000000003 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000003 /* Theme.swift */; };
+		B001000000000000000004 /* WakeTimeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000004 /* WakeTimeCalculator.swift */; };
+		B001000000000000000005 /* WakeTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000005 /* WakeTimeView.swift */; };
+		B001000000000000000006 /* CandleMascotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000006 /* CandleMascotView.swift */; };
+		B001000000000000000007 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F001000000000000000007 /* Assets.xcassets */; };
+		B001000000000000000008 /* CommitContractView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000008 /* CommitContractView.swift */; };
+		B001000000000000000009 /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = PREF000000000000000001 /* Inject */; };
+		B00100000000000000000A /* SleepSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000A /* SleepSessionView.swift */; };
+		B00100000000000000000B /* SleepSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000B /* SleepSession.swift */; };
+		B00100000000000000000D /* SessionTrackerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000D /* SessionTrackerCard.swift */; };
+		B00100000000000000000E /* SleepReminderNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000E /* SleepReminderNotification.swift */; };
+		B00100000000000000000F /* OnboardingHookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000F /* OnboardingHookView.swift */; };
+		B001000000000000000010 /* OnboardingProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000010 /* OnboardingProgressBar.swift */; };
+		B001000000000000000011 /* OnboardingExplainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000011 /* OnboardingExplainView.swift */; };
+		B001000000000000000012 /* OnboardingAppPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000012 /* OnboardingAppPreviewView.swift */; };
+		B001000000000000000013 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000013 /* PaywallView.swift */; };
+		B001000000000000000014 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000014 /* MainTabView.swift */; };
+		B001000000000000000015 /* SessionHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000015 /* SessionHistoryView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F001000000000000000001 /* WakyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakyApp.swift; sourceTree = "<group>"; };
+		F001000000000000000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F001000000000000000003 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		F001000000000000000004 /* WakeTimeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeTimeCalculator.swift; sourceTree = "<group>"; };
+		F001000000000000000005 /* WakeTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeTimeView.swift; sourceTree = "<group>"; };
+		F001000000000000000006 /* CandleMascotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleMascotView.swift; sourceTree = "<group>"; };
+		F001000000000000000007 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F001000000000000000008 /* CommitContractView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitContractView.swift; sourceTree = "<group>"; };
+		F00100000000000000000A /* SleepSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepSessionView.swift; sourceTree = "<group>"; };
+		F00100000000000000000B /* SleepSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepSession.swift; sourceTree = "<group>"; };
+		F00100000000000000000D /* SessionTrackerCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTrackerCard.swift; sourceTree = "<group>"; };
+		F00100000000000000000E /* SleepReminderNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepReminderNotification.swift; sourceTree = "<group>"; };
+		F00100000000000000000F /* OnboardingHookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingHookView.swift; sourceTree = "<group>"; };
+		F001000000000000000010 /* OnboardingProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingProgressBar.swift; sourceTree = "<group>"; };
+		F001000000000000000011 /* OnboardingExplainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingExplainView.swift; sourceTree = "<group>"; };
+		F001000000000000000012 /* OnboardingAppPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingAppPreviewView.swift; sourceTree = "<group>"; };
+		F001000000000000000013 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		F001000000000000000014 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		F001000000000000000015 /* SessionHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHistoryView.swift; sourceTree = "<group>"; };
+		F001000000000000000099 /* Waky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Waky.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E001000000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B001000000000000000009 /* Inject in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		G001000000000000000000 = {
+			isa = PBXGroup;
+			children = (
+				G001000000000000000001 /* Waky */,
+				G001000000000000000002 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		G001000000000000000001 /* Waky */ = {
+			isa = PBXGroup;
+			children = (
+				F001000000000000000001 /* WakyApp.swift */,
+				F001000000000000000002 /* ContentView.swift */,
+				G001000000000000000003 /* Theme */,
+				G001000000000000000004 /* Models */,
+				G001000000000000000005 /* Views */,
+				F001000000000000000007 /* Assets.xcassets */,
+			);
+			path = Waky;
+			sourceTree = "<group>";
+		};
+		G001000000000000000002 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F001000000000000000099 /* Waky.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		G001000000000000000003 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				F001000000000000000003 /* Theme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		G001000000000000000004 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F001000000000000000004 /* WakeTimeCalculator.swift */,
+				F00100000000000000000B /* SleepSession.swift */,
+				F00100000000000000000E /* SleepReminderNotification.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		G001000000000000000005 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				G001000000000000000006 /* Onboarding */,
+				F001000000000000000005 /* WakeTimeView.swift */,
+				F001000000000000000006 /* CandleMascotView.swift */,
+				F001000000000000000008 /* CommitContractView.swift */,
+				F00100000000000000000A /* SleepSessionView.swift */,
+				F00100000000000000000D /* SessionTrackerCard.swift */,
+				F001000000000000000013 /* PaywallView.swift */,
+				F001000000000000000014 /* MainTabView.swift */,
+				F001000000000000000015 /* SessionHistoryView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		G001000000000000000006 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				F00100000000000000000F /* OnboardingHookView.swift */,
+				F001000000000000000010 /* OnboardingProgressBar.swift */,
+				F001000000000000000011 /* OnboardingExplainView.swift */,
+				F001000000000000000012 /* OnboardingAppPreviewView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		T001000000000000000001 /* Waky */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C001000000000000000002 /* Build configuration list for PBXNativeTarget "Waky" */;
+			buildPhases = (
+				S001000000000000000001 /* Sources */,
+				R001000000000000000001 /* Resources */,
+				E001000000000000000001 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Waky;
+			packageProductDependencies = (
+				PREF000000000000000001 /* Inject */,
+			);
+			productName = Waky;
+			productReference = F001000000000000000099 /* Waky.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		P001000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					T001000000000000000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = C001000000000000000001 /* Build configuration list for PBXProject "Waky" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = G001000000000000000000;
+			packageReferences = (
+				PKGREF0000000000000001 /* XCRemoteSwiftPackageReference "Inject" */,
+			);
+			productRefGroup = G001000000000000000002 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				T001000000000000000001 /* Waky */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		R001000000000000000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B001000000000000000007 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		S001000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B001000000000000000001 /* WakyApp.swift in Sources */,
+				B001000000000000000002 /* ContentView.swift in Sources */,
+				B001000000000000000003 /* Theme.swift in Sources */,
+				B001000000000000000004 /* WakeTimeCalculator.swift in Sources */,
+				B001000000000000000005 /* WakeTimeView.swift in Sources */,
+				B001000000000000000006 /* CandleMascotView.swift in Sources */,
+				B001000000000000000008 /* CommitContractView.swift in Sources */,
+				B00100000000000000000A /* SleepSessionView.swift in Sources */,
+				B00100000000000000000B /* SleepSession.swift in Sources */,
+				B00100000000000000000D /* SessionTrackerCard.swift in Sources */,
+				B00100000000000000000E /* SleepReminderNotification.swift in Sources */,
+				B00100000000000000000F /* OnboardingHookView.swift in Sources */,
+				B001000000000000000010 /* OnboardingProgressBar.swift in Sources */,
+				B001000000000000000011 /* OnboardingExplainView.swift in Sources */,
+				B001000000000000000012 /* OnboardingAppPreviewView.swift in Sources */,
+				B001000000000000000013 /* PaywallView.swift in Sources */,
+				B001000000000000000014 /* MainTabView.swift in Sources */,
+				B001000000000000000015 /* SessionHistoryView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C001000000000000000011 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMIT_FRONTEND_COMMAND_LINES = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C001000000000000000012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C001000000000000000021 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-Xlinker",
+					"-interposable",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.waky.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C001000000000000000022 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.waky.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C001000000000000000001 /* Build configuration list for PBXProject "Waky" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C001000000000000000011 /* Debug */,
+				C001000000000000000012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C001000000000000000002 /* Build configuration list for PBXNativeTarget "Waky" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C001000000000000000021 /* Debug */,
+				C001000000000000000022 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		PKGREF0000000000000001 /* XCRemoteSwiftPackageReference "Inject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzysztofzablocki/Inject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		PREF000000000000000001 /* Inject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = PKGREF0000000000000001 /* XCRemoteSwiftPackageReference "Inject" */;
+			productName = Inject;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = P001000000000000000001 /* Project object */;
+}
