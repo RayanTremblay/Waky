@@ -6,6 +6,7 @@ struct ContentView: View {
     @StateObject private var sessionStore = SessionStore()
     @Environment(\.scenePhase) private var scenePhase
     @AppStorage("waky_onboarding_step") private var onboardingStep = 0
+    @AppStorage("waky_dark_mode") private var darkModeEnabled = false
 
     private let onboardingTotalSteps = 3
 
@@ -35,6 +36,7 @@ struct ContentView: View {
                 .background(WakyTheme.background)
             }
         }
+            .preferredColorScheme(darkModeEnabled ? .dark : .light)
             .onAppear {
                 if onboardingStep >= onboardingTotalSteps {
                     SleepReminderNotification.requestPermissionIfNeeded()

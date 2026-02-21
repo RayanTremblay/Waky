@@ -19,7 +19,7 @@ struct CandlePlaceholderView: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 12)
-                .fill(Color.white)
+                .fill(WakyTheme.cardBackground)
                 .overlay(
                     RoundedRectangle(cornerRadius: 12)
                         .stroke(WakyTheme.textPrimary.opacity(0.4), lineWidth: 2)

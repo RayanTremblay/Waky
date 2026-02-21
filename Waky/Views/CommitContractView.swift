@@ -72,7 +72,7 @@ struct CommitContractView: View {
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(WakyTheme.cardPadding)
-                    .background(Color.white.opacity(0.5))
+                    .background(WakyTheme.cardBackground)
                     .overlay(
                         RoundedRectangle(cornerRadius: WakyTheme.cornerRadius)
                             .stroke(WakyTheme.textSecondary.opacity(0.2), lineWidth: 1)
@@ -104,7 +104,7 @@ struct CommitContractView: View {
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 32)
                     .padding(.horizontal, WakyTheme.cardPadding)
-                    .background(Color.white.opacity(0.4))
+                    .background(WakyTheme.cardBackground.opacity(0.8))
                     .overlay(
                         RoundedRectangle(cornerRadius: WakyTheme.cornerRadius)
                             .stroke(WakyTheme.textSecondary.opacity(0.25), lineWidth: 1)

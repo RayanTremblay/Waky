@@ -61,7 +61,7 @@ struct SessionTrackerCard: View {
         }
         .padding(WakyTheme.cardPadding)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color.white.opacity(0.6))
+        .background(WakyTheme.cardBackground)
         .overlay(
             RoundedRectangle(cornerRadius: WakyTheme.cornerRadius)
                 .stroke(WakyTheme.textSecondary.opacity(0.2), lineWidth: 1)

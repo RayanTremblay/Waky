@@ -20,6 +20,12 @@ struct MainTabView: View {
                     Label("Sessions", systemImage: "list.bullet.clipboard.fill")
                 }
                 .tag(1)
+
+            SettingsView()
+                .tabItem {
+                    Label("Settings", systemImage: "gearshape.fill")
+                }
+                .tag(2)
         }
         .tint(WakyTheme.accent)
         .enableInjection()

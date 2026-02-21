@@ -27,6 +27,7 @@
 		B001000000000000000013 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000013 /* PaywallView.swift */; };
 		B001000000000000000014 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000014 /* MainTabView.swift */; };
 		B001000000000000000015 /* SessionHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000015 /* SessionHistoryView.swift */; };
+		B001000000000000000016 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000016 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		F001000000000000000013 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
 		F001000000000000000014 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		F001000000000000000015 /* SessionHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHistoryView.swift; sourceTree = "<group>"; };
+		F001000000000000000016 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		F001000000000000000099 /* Waky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Waky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -123,6 +125,7 @@
 				F001000000000000000013 /* PaywallView.swift */,
 				F001000000000000000014 /* MainTabView.swift */,
 				F001000000000000000015 /* SessionHistoryView.swift */,
+				F001000000000000000016 /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				B001000000000000000013 /* PaywallView.swift in Sources */,
 				B001000000000000000014 /* MainTabView.swift in Sources */,
 				B001000000000000000015 /* SessionHistoryView.swift in Sources */,
+				B001000000000000000016 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
