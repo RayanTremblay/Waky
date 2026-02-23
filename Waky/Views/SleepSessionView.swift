@@ -8,8 +8,10 @@ struct SleepSessionView: View {
     @ObservedObject var sessionStore: SessionStore
     var onDismiss: () -> Void
     
+    @StateObject private var appBlockManager = AppBlockManager.shared
     @State private var quoteIndex: Int = 0
     @State private var showEndSessionPopup: Bool = false
+    @State private var showUnblockPrompt: Bool = false
     @State private var showWelcomeMessage: Bool = false
     
     private var sessionTimeRangeText: String {
@@ -81,6 +83,23 @@ struct SleepSessionView: View {
             }
         }
         .overlay {
+            if showUnblockPrompt {
+                UnblockAppsPromptView(
+                    onUnblock: {
+                        appBlockManager.isBlockingEnabled = false
+                        showUnblockPrompt = false
+                        onDismiss()
+                    },
+                    onNotNow: {
+                        showUnblockPrompt = false
+                        onDismiss()
+                    }
+                )
+                .transition(.opacity.combined(with: .scale(scale: 0.92)))
+                .zIndex(101)
+            }
+        }
+        .overlay {
             if showEndSessionPopup {
                 EndSessionPopupView(
                     sessionStart: sessionStore.currentSession?.actualStart,
@@ -89,7 +108,11 @@ struct SleepSessionView: View {
                     onEndSession: {
                         showEndSessionPopup = false
                         sessionStore.recordActualEndAndComplete()
-                        onDismiss()
+                        if appBlockManager.hasSelectedApps && appBlockManager.isBlockingEnabled {
+                            showUnblockPrompt = true
+                        } else {
+                            onDismiss()
+                        }
                     }
                 )
                 .transition(.opacity.combined(with: .scale(scale: 0.92)))
@@ -97,6 +120,7 @@ struct SleepSessionView: View {
             }
         }
         .animation(.spring(response: 0.35, dampingFraction: 0.8), value: showEndSessionPopup)
+        .animation(.spring(response: 0.35, dampingFraction: 0.8), value: showUnblockPrompt)
         .onAppear {
             sessionStore.recordActualStart()
             startQuoteRotation()
@@ -145,6 +169,66 @@ struct SleepSessionView: View {
                     quoteIndex = (quoteIndex + 1) % sleepQuotes.count
                 }
             }
+        }
+    }
+}
+
+// MARK: - Unblock apps after sleep session
+struct UnblockAppsPromptView: View {
+    var onUnblock: () -> Void
+    var onNotNow: () -> Void
+
+    var body: some View {
+        ZStack {
+            Color.black.opacity(0.4)
+                .ignoresSafeArea()
+                .onTapGesture(perform: onNotNow)
+
+            VStack(spacing: 20) {
+                Image(systemName: "app.badge.checkmark")
+                    .font(.system(size: 40))
+                    .foregroundStyle(WakyTheme.accent)
+
+                Text("Sleep session finished")
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .foregroundColor(WakyTheme.textPrimary)
+
+                Text("Do you want to unblock apps now?")
+                    .font(.subheadline)
+                    .foregroundColor(WakyTheme.textSecondary)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal)
+
+                HStack(spacing: 12) {
+                    Button(action: onNotNow) {
+                        Text("Not now")
+                            .fontWeight(.semibold)
+                            .foregroundColor(WakyTheme.textPrimary)
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 14)
+                            .background(WakyTheme.cardBackground)
+                            .clipShape(RoundedRectangle(cornerRadius: WakyTheme.cornerRadius))
+                    }
+                    .buttonStyle(.plain)
+
+                    Button(action: onUnblock) {
+                        Text("Unblock apps")
+                            .fontWeight(.semibold)
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 14)
+                            .background(WakyTheme.accent)
+                            .clipShape(RoundedRectangle(cornerRadius: WakyTheme.cornerRadius))
+                    }
+                    .buttonStyle(.plain)
+                }
+            }
+            .padding(28)
+            .background(WakyTheme.background)
+            .clipShape(RoundedRectangle(cornerRadius: WakyTheme.cornerRadiusLarge))
+            .shadow(color: .black.opacity(0.15), radius: 24, x: 0, y: 8)
+            .padding(.horizontal, 32)
         }
     }
 }

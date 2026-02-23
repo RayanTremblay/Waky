@@ -24,7 +24,12 @@ struct OnboardingHookView: View {
             ScrollView {
                 VStack(spacing: 28) {
                     // Welcome
-                    VStack(spacing: 12) {
+                    VStack(spacing: 16) {
+                        Image("AppIconImage")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 80, height: 80)
+                            .clipShape(RoundedRectangle(cornerRadius: 18))
                         Text("Welcome to Waky")
                             .font(.title)
                             .fontWeight(.bold)

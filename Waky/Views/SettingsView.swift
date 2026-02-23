@@ -1,7 +1,7 @@
 import SwiftUI
 import Inject
 
-/// Settings tab: dark mode toggle, privacy policy, terms of use.
+/// Settings tab: dark mode toggle, app blocking, privacy policy, terms of use.
 struct SettingsView: View {
     @ObserveInjection var inject
     @AppStorage("waky_dark_mode") private var darkModeEnabled = false
@@ -10,10 +10,43 @@ struct SettingsView: View {
         NavigationView {
             List {
                 Section {
+                    HStack(spacing: 16) {
+                        Image("AppIconImage")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 60, height: 60)
+                            .clipShape(RoundedRectangle(cornerRadius: 14))
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("Waky")
+                                .font(.headline)
+                                .foregroundColor(WakyTheme.textPrimary)
+                            Text("Sleep commitment")
+                                .font(.caption)
+                                .foregroundColor(WakyTheme.textSecondary)
+                        }
+                        Spacer()
+                    }
+                    .listRowBackground(Color.clear)
+                    .listRowInsets(EdgeInsets(top: 12, leading: 16, bottom: 12, trailing: 16))
+                }
+
+                Section {
                     Toggle(isOn: $darkModeEnabled) {
                         Label("Dark mode", systemImage: "moon.fill")
                     }
                     .tint(WakyTheme.accent)
+                }
+
+                if #available(iOS 16.0, *) {
+                    Section {
+                        NavigationLink {
+                            AppBlockSettingsView()
+                        } label: {
+                            Label("Block distracting apps", systemImage: "app.badge.fill")
+                        }
+                    } footer: {
+                        Text("Block apps like TikTok, Instagram, and others. Requires Screen Time permission. Works on a physical device.")
+                    }
                 }
 
                 Section {

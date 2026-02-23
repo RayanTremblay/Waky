@@ -8,7 +8,7 @@ struct ContentView: View {
     @AppStorage("waky_onboarding_step") private var onboardingStep = 0
     @AppStorage("waky_dark_mode") private var darkModeEnabled = false
 
-    private let onboardingTotalSteps = 3
+    private let onboardingTotalSteps = 4
 
     private var showOnboarding: Bool {
         onboardingStep < onboardingTotalSteps
@@ -29,8 +29,10 @@ struct ContentView: View {
                         OnboardingHookView(onboardingStep: $onboardingStep)
                     } else if onboardingStep == 1 {
                         OnboardingExplainView(onboardingStep: $onboardingStep)
+                    } else if onboardingStep == 2 {
+                        OnboardingBedtimeSelectionView(onboardingStep: $onboardingStep)
                     } else {
-                        OnboardingAppPreviewView(onboardingStep: $onboardingStep)
+                        OnboardingHomeView(onboardingStep: $onboardingStep)
                     }
                 }
                 .background(WakyTheme.background)

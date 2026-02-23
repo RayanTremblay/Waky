@@ -36,8 +36,8 @@ struct CommitContractView: View {
             
             ScrollView {
                 VStack(alignment: .leading, spacing: 0) {
-                    // Contract header
-                    VStack(alignment: .leading, spacing: 8) {
+                    // Contract header (centered so it doesn’t overlap the Back button)
+                    VStack(alignment: .center, spacing: 8) {
                         Text("SLEEP COMMITMENT")
                             .font(.system(size: 13, weight: .bold))
                             .tracking(1.2)
@@ -47,7 +47,7 @@ struct CommitContractView: View {
                             .font(.caption)
                             .foregroundColor(WakyTheme.textSecondary.opacity(0.9))
                     }
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .frame(maxWidth: .infinity)
                     .padding(.bottom, 20)
                     
                     // Contract body — formal language, no name prompt
@@ -58,7 +58,7 @@ struct CommitContractView: View {
                                 .foregroundColor(WakyTheme.textPrimary)
                                 .lineSpacing(5)
                                 .fixedSize(horizontal: false, vertical: true)
-                            Text("I understand that my phone needs to stay on the Waky sleep screen in order for this contract to be respected.")
+                            Text("I understand that Waky has blocked distracting apps and that I cannot use these apps in order to respect this sleep contract.")
                                 .font(.subheadline)
                                 .foregroundColor(WakyTheme.textPrimary)
                                 .lineSpacing(5)

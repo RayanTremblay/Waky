@@ -9,7 +9,7 @@ struct MainTabView: View {
 
     var body: some View {
         TabView(selection: $selectedTab) {
-            WakeTimeView(sessionStore: sessionStore)
+            HomeContainerView(sessionStore: sessionStore)
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
                 }
@@ -28,6 +28,10 @@ struct MainTabView: View {
                 .tag(2)
         }
         .tint(WakyTheme.accent)
+        .onAppear {
+            // Ensure we have notification permission for bedtime reminders (e.g. first launch after onboarding)
+            SleepReminderNotification.requestPermissionIfNeeded()
+        }
         .enableInjection()
     }
 }

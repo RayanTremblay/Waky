@@ -1,15 +1,12 @@
 import SwiftUI
 import Inject
 
-/// Third onboarding step: shows the real app UI. Commit opens the contract; after signature, paywall (subscribe only).
-struct OnboardingAppPreviewView: View {
+/// Onboarding step 2: Select wake time + fall asleep by, then "Confirm bedtime" → saves and goes to home preview (step 3).
+struct OnboardingBedtimeSelectionView: View {
     @ObserveInjection var inject
     @Binding var onboardingStep: Int
-    @AppStorage("waky_username") private var username: String = "Me"
     @State private var wakeTime: Date = Self.nextDefaultWakeTime()
     @State private var selectedCycleIndex: Int = 0
-    @State private var showCommitContract: Bool = false
-    @State private var showPaywall: Bool = false
 
     private var bedtimes: [(date: Date, cycles: Int, sleepMinutes: Int)] {
         WakeTimeCalculator.recommendedBedtimes(for: wakeTime)
@@ -38,7 +35,6 @@ struct OnboardingAppPreviewView: View {
                         .font(.subheadline)
                         .fontWeight(.semibold)
                         .foregroundColor(WakyTheme.textSecondary)
-
                     DatePicker("", selection: $wakeTime, displayedComponents: .hourAndMinute)
                         .datePickerStyle(.wheel)
                         .labelsHidden()
@@ -52,30 +48,24 @@ struct OnboardingAppPreviewView: View {
                         .font(.subheadline)
                         .fontWeight(.semibold)
                         .foregroundColor(WakyTheme.textSecondary)
-
                     ForEach(Array(bedtimes.enumerated()), id: \.offset) { index, item in
                         BedtimeRow(
                             bedtime: item.date,
                             cycles: item.cycles,
                             sleepMinutes: item.sleepMinutes,
                             isSelected: selectedCycleIndex == index
-                        ) {
-                            selectedCycleIndex = index
-                        }
+                        ) { selectedCycleIndex = index }
                     }
                 }
 
-                Button(action: { showCommitContract = true }) {
-                    HStack(spacing: 8) {
-                        Image(systemName: "hand.raised.fill")
-                        Text("Commit")
-                            .fontWeight(.semibold)
-                    }
-                    .foregroundColor(.white)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 16)
-                    .background(WakyTheme.accent)
-                    .clipShape(RoundedRectangle(cornerRadius: WakyTheme.cornerRadiusLarge))
+                Button(action: confirmBedtime) {
+                    Text("Confirm bedtime")
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 16)
+                        .background(WakyTheme.accent)
+                        .clipShape(RoundedRectangle(cornerRadius: WakyTheme.cornerRadiusLarge))
                 }
                 .padding(.top, 8)
 
@@ -85,40 +75,23 @@ struct OnboardingAppPreviewView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(WakyTheme.background)
-        .sheet(isPresented: $showCommitContract) {
-            let selectedBedtime = bedtimes[selectedCycleIndex].date
-            CommitFlowView(
-                isPresented: $showCommitContract,
-                username: $username,
-                bedtime: selectedBedtime,
-                onCommitted: {
-                    // Save session so we can start it after they subscribe
-                    UserDefaults.standard.set(selectedBedtime.timeIntervalSince1970, forKey: "waky_pending_session_start")
-                    UserDefaults.standard.set(wakeTime.timeIntervalSince1970, forKey: "waky_pending_session_end")
-                    showCommitContract = false
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
-                        showPaywall = true
-                    }
-                }
-            )
-        }
-        .sheet(isPresented: $showPaywall) {
-            PaywallView(
-                onSubscribe: {
-                    showPaywall = false
-                    onboardingStep = 3
-                },
-                subscribeOnly: true
-            )
-        }
         .onAppear {
-            // Request notification permission so wind-down reminders work after they subscribe
             SleepReminderNotification.requestPermissionIfNeeded()
         }
         .enableInjection()
     }
+
+    private func confirmBedtime() {
+        let bedtime = bedtimes[selectedCycleIndex].date
+        UserDefaults.standard.set(bedtime.timeIntervalSince1970, forKey: "waky_confirmed_bedtime")
+        UserDefaults.standard.set(wakeTime.timeIntervalSince1970, forKey: "waky_confirmed_wake_time")
+        SleepReminderNotification.requestPermissionIfNeeded { _ in
+            SleepReminderNotification.schedulePrepareForSleepForNextOccurrence(bedtime: bedtime)
+        }
+        onboardingStep = 3
+    }
 }
 
 #Preview {
-    OnboardingAppPreviewView(onboardingStep: .constant(2))
+    OnboardingBedtimeSelectionView(onboardingStep: .constant(2))
 }

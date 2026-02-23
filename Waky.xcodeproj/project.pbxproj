@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,7 +28,43 @@
 		B001000000000000000014 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000014 /* MainTabView.swift */; };
 		B001000000000000000015 /* SessionHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000015 /* SessionHistoryView.swift */; };
 		B001000000000000000016 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000016 /* SettingsView.swift */; };
+		B001000000000000000017 /* FamilyControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F001000000000000000018 /* FamilyControls.framework */; };
+		B001000000000000000018 /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F001000000000000000019 /* ManagedSettings.framework */; };
+		B001000000000000000019 /* AppBlockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000001A /* AppBlockManager.swift */; };
+		B00100000000000000001A /* AppBlockSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000001B /* AppBlockSettingsView.swift */; };
+		B00100000000000000001B /* CommitFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000001C /* CommitFlowView.swift */; };
+		B00100000000000000001C /* OnboardingBedtimeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000001D /* OnboardingBedtimeSelectionView.swift */; };
+		B00100000000000000001D /* OnboardingHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000001E /* OnboardingHomeView.swift */; };
+		B002000000000000000001 /* ShieldConfigurationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002000000000000000001 /* ShieldConfigurationDataSource.swift */; };
+		B002000000000000000002 /* WakyShield.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F002000000000000000099 /* WakyShield.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B002000000000000000003 /* ManagedSettingsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F002000000000000000004 /* ManagedSettingsUI.framework */; };
+		B002000000000000000004 /* FamilyControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F001000000000000000018 /* FamilyControls.framework */; };
+		B002000000000000000005 /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F001000000000000000019 /* ManagedSettings.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		P002000000000000000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = P001000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = T002000000000000000001;
+			remoteInfo = WakyShield;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D002000000000000000001 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B002000000000000000002 /* WakyShield.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F001000000000000000001 /* WakyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakyApp.swift; sourceTree = "<group>"; };
@@ -51,7 +87,19 @@
 		F001000000000000000014 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		F001000000000000000015 /* SessionHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHistoryView.swift; sourceTree = "<group>"; };
 		F001000000000000000016 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		F001000000000000000017 /* Waky.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Waky.entitlements; sourceTree = "<group>"; };
+		F001000000000000000018 /* FamilyControls.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FamilyControls.framework; path = System/Library/Frameworks/FamilyControls.framework; sourceTree = SDKROOT; };
+		F001000000000000000019 /* ManagedSettings.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettings.framework; path = System/Library/Frameworks/ManagedSettings.framework; sourceTree = SDKROOT; };
+		F00100000000000000001A /* AppBlockManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBlockManager.swift; sourceTree = "<group>"; };
+		F00100000000000000001B /* AppBlockSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBlockSettingsView.swift; sourceTree = "<group>"; };
+		F00100000000000000001C /* CommitFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitFlowView.swift; sourceTree = "<group>"; };
+		F00100000000000000001D /* OnboardingBedtimeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingBedtimeSelectionView.swift; sourceTree = "<group>"; };
+		F00100000000000000001E /* OnboardingHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingHomeView.swift; sourceTree = "<group>"; };
 		F001000000000000000099 /* Waky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Waky.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F002000000000000000001 /* ShieldConfigurationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldConfigurationDataSource.swift; sourceTree = "<group>"; };
+		F002000000000000000003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F002000000000000000004 /* ManagedSettingsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettingsUI.framework; path = System/Library/Frameworks/ManagedSettingsUI.framework; sourceTree = SDKROOT; };
+		F002000000000000000099 /* WakyShield.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WakyShield.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +108,41 @@
 			buildActionMask = 2147483647;
 			files = (
 				B001000000000000000009 /* Inject in Frameworks */,
+				B001000000000000000017 /* FamilyControls.framework in Frameworks */,
+				B001000000000000000018 /* ManagedSettings.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E002000000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B002000000000000000003 /* ManagedSettingsUI.framework in Frameworks */,
+				B002000000000000000004 /* FamilyControls.framework in Frameworks */,
+				B002000000000000000005 /* ManagedSettings.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		62BCDD542F4A8ECD001AB2D8 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				F001000000000000000018 /* FamilyControls.framework */,
+				F001000000000000000019 /* ManagedSettings.framework */,
+				F002000000000000000004 /* ManagedSettingsUI.framework */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		G001000000000000000000 = {
 			isa = PBXGroup;
 			children = (
 				G001000000000000000001 /* Waky */,
+				G002000000000000000001 /* WakyShield */,
 				G001000000000000000002 /* Products */,
+				62BCDD542F4A8ECD001AB2D8 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +155,7 @@
 				G001000000000000000004 /* Models */,
 				G001000000000000000005 /* Views */,
 				F001000000000000000007 /* Assets.xcassets */,
+				F001000000000000000017 /* Waky.entitlements */,
 			);
 			path = Waky;
 			sourceTree = "<group>";
@@ -91,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				F001000000000000000099 /* Waky.app */,
+				F002000000000000000099 /* WakyShield.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,6 +183,7 @@
 				F001000000000000000004 /* WakeTimeCalculator.swift */,
 				F00100000000000000000B /* SleepSession.swift */,
 				F00100000000000000000E /* SleepReminderNotification.swift */,
+				F00100000000000000001A /* AppBlockManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -126,6 +201,8 @@
 				F001000000000000000014 /* MainTabView.swift */,
 				F001000000000000000015 /* SessionHistoryView.swift */,
 				F001000000000000000016 /* SettingsView.swift */,
+				F00100000000000000001B /* AppBlockSettingsView.swift */,
+				F00100000000000000001C /* CommitFlowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -137,8 +214,19 @@
 				F001000000000000000010 /* OnboardingProgressBar.swift */,
 				F001000000000000000011 /* OnboardingExplainView.swift */,
 				F001000000000000000012 /* OnboardingAppPreviewView.swift */,
+				F00100000000000000001D /* OnboardingBedtimeSelectionView.swift */,
+				F00100000000000000001E /* OnboardingHomeView.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		G002000000000000000001 /* WakyShield */ = {
+			isa = PBXGroup;
+			children = (
+				F002000000000000000001 /* ShieldConfigurationDataSource.swift */,
+				F002000000000000000003 /* Info.plist */,
+			);
+			path = WakyShield;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,10 +239,12 @@
 				S001000000000000000001 /* Sources */,
 				R001000000000000000001 /* Resources */,
 				E001000000000000000001 /* Frameworks */,
+				D002000000000000000001 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D002000000000000000002 /* PBXTargetDependency */,
 			);
 			name = Waky;
 			packageProductDependencies = (
@@ -163,6 +253,22 @@
 			productName = Waky;
 			productReference = F001000000000000000099 /* Waky.app */;
 			productType = "com.apple.product-type.application";
+		};
+		T002000000000000000001 /* WakyShield */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C002000000000000000001 /* Build configuration list for PBXNativeTarget "WakyShield" */;
+			buildPhases = (
+				S002000000000000000001 /* Sources */,
+				E002000000000000000001 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WakyShield;
+			productName = WakyShield;
+			productReference = F002000000000000000099 /* WakyShield.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -196,6 +302,7 @@
 			projectRoot = "";
 			targets = (
 				T001000000000000000001 /* Waky */,
+				T002000000000000000001 /* WakyShield */,
 			);
 		};
 /* End PBXProject section */
@@ -231,14 +338,35 @@
 				B001000000000000000010 /* OnboardingProgressBar.swift in Sources */,
 				B001000000000000000011 /* OnboardingExplainView.swift in Sources */,
 				B001000000000000000012 /* OnboardingAppPreviewView.swift in Sources */,
+				B00100000000000000001C /* OnboardingBedtimeSelectionView.swift in Sources */,
+				B00100000000000000001D /* OnboardingHomeView.swift in Sources */,
 				B001000000000000000013 /* PaywallView.swift in Sources */,
 				B001000000000000000014 /* MainTabView.swift in Sources */,
 				B001000000000000000015 /* SessionHistoryView.swift in Sources */,
 				B001000000000000000016 /* SettingsView.swift in Sources */,
+				B001000000000000000019 /* AppBlockManager.swift in Sources */,
+				B00100000000000000001A /* AppBlockSettingsView.swift in Sources */,
+				B00100000000000000001B /* CommitFlowView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		S002000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B002000000000000000001 /* ShieldConfigurationDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D002000000000000000002 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = T002000000000000000001 /* WakyShield */;
+			targetProxy = P002000000000000000001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C001000000000000000011 /* Debug */ = {
@@ -304,9 +432,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = Waky/Waky.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = Z5U7YXHL5B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -337,9 +468,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = Waky/Waky.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = Z5U7YXHL5B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -354,6 +488,58 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.waky.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C002000000000000000011 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z5U7YXHL5B;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = WakyShield/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Waky Shield";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.waky.app.WakyShield;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C002000000000000000012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z5U7YXHL5B;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = WakyShield/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Waky Shield";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.waky.app.WakyShield;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -377,6 +563,15 @@
 			buildConfigurations = (
 				C001000000000000000021 /* Debug */,
 				C001000000000000000022 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C002000000000000000001 /* Build configuration list for PBXNativeTarget "WakyShield" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C002000000000000000011 /* Debug */,
+				C002000000000000000012 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
